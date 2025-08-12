@@ -104,7 +104,7 @@
             <p class="text-center text-gray-500 mb-10">De raízes fortes a novos horizontes na ciência de dados.</p>
             <div class="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
                 <p class="text-gray-700 leading-relaxed">
-                    Do garoto que entregava panfleto de supermercado à Técnico Eletromecânico com experiência internacional. Perseverei nas metas que eu estabeleci, que em 2008 era: Conhecer fábricas e o mundo. Me dediquei e alcancei. E por mais de uma década, atuei em campo, lidando com sistemas de automação complexos, manutenções críticas e otimização de processos. Essa vivência me deu uma visão aprofundada sobre como os sistemas operam e geram dados em tempo real. A curiosidade sobre "o porquê" por trás das falhas e a busca por eficiência me levaram naturalmente a um caminho de análise destas informações. Descobri na Ciência de Dados a ferramenta ideal para transformar essa experiência prática em insights estratégicos, passando de resolver problemas mecânicos e elétricos para decifrar as histórias que os dados contam.
+                    Minha carreira começou no coração da indústria, como Técnico Eletromecânico. Por mais de uma década, atuei em campo, lidando com sistemas de automação complexos, manutenções críticas e otimização de processos. Essa vivência me deu uma visão aprofundada sobre como os sistemas operam e geram dados em tempo real. A curiosidade sobre "o porquê" por trás das falhas e a busca por eficiência me levaram naturalmente a um caminho de análise. Descobri na Ciência de Dados a ferramenta ideal para transformar essa experiência prática em insights estratégicos, passando de resolver problemas mecânicos para decifrar as histórias que os dados contam.
                 </p>
             </div>
         </section>
@@ -427,37 +427,18 @@
                 }
             });
 
-            
-            document.addEventListener('DOMContentLoaded', () => {
-        // ... (o restante do seu código com as outras funções) ...
-
-        // Smooth scroll for navigation (código que já estava lá)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
-
-        // Scroll suave para âncoras na URL ao carregar a página (o novo código)
-        if (window.location.hash) {
-            const targetElement = document.querySelector(window.location.hash);
-            if (targetElement) {
-                setTimeout(() => {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }, 100);
-            }
-        }
-    });
-            
     </script>
 
 </body>
 </html>
-
-
 
