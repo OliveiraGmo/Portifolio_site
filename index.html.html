@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -21,10 +21,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Calm Neutrals (Off-white, Dark Gray, Muted Blue Accent) -->
-    <!-- Application Structure Plan: A single-page interactive resume telling a story. Starts with a hero section, then a narrative 'My Journey', followed by an interactive skills dashboard with a radar chart, a visual experience timeline, and sections for education and contact. This structure transforms a static resume into an engaging user experience, highlighting the transition from industry to data science as a key strength. -->
-    <!-- Visualization & Content Choices: 1. Skills Dashboard (HTML/JS Interaction): Organizes transferable skills into categories (Operations, Analysis, Management). Clicking reveals details, making it interactive and not overwhelming. Goal: Organize/Inform. 2. Radar Chart (Chart.js/Canvas): Visually summarizes proficiency/relevance of skill categories to data science. Goal: Compare/Inform. 3. Experience Timeline (HTML/CSS): Visually represents 10+ years of experience. Goal: Show Change. All choices avoid SVG/Mermaid and focus on creating an interactive narrative from the source resume text. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -75,7 +71,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header / Hero Section -->
     <header class="bg-white shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-800">Gabriel Monteiro de Oliveira</h1>
@@ -92,38 +87,32 @@
 
     <main class="container mx-auto px-6 py-12">
 
-        <!-- Intro Section -->
         <section class="text-center mb-20">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Analista de Dados em Formação</h2>
             <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Com mais de 10 anos de experiência como Técnico Eletromecânico em serviços de campo, desenvolvi uma sólida base em Eletricidade e Mecânica, além de um conjunto robusto de habilidades analíticas, operacionais e de gestão, altamente transferíveis para o campo da Ciência e Análise de Dados. Minha vivência em ambientes industriais complexos me proporcionou uma compreensão aprofundada de sistemas, processos e otimização, essenciais para a interpretação e manipulação de grandes volumes de dados.</p>
         </section>
 
-        <!-- My Journey Section -->
         <section id="journey" class="mb-20">
             <h3 class="text-3xl font-bold text-center mb-2 section-title">Minha Jornada</h3>
             <p class="text-center text-gray-500 mb-10">De raízes fortes a novos horizontes na ciência de dados.</p>
             <div class="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
                 <p class="text-gray-700 leading-relaxed">
-                    Minha carreira começou no coração da indústria, como Técnico Eletromecânico. Por mais de uma década, atuei em campo, lidando com sistemas de automação complexos, manutenções críticas e otimização de processos. Essa vivência me deu uma visão aprofundada sobre como os sistemas operam e geram dados em tempo real. A curiosidade sobre "o porquê" por trás das falhas e a busca por eficiência me levaram naturalmente a um caminho de análise. Descobri na Ciência de Dados a ferramenta ideal para transformar essa experiência prática em insights estratégicos, passando de resolver problemas mecânicos para decifrar as histórias que os dados contam.
+                    Do garoto que entregava panfleto de supermercado à Técnico Eletromecânico com experiência internacional. Perseverei nas metas que eu estabeleci, que em 2008 era: Conhecer fábricas e o mundo. Me dediquei e alcancei. E por mais de uma década, atuei em campo, lidando com sistemas de automação complexos, manutenções críticas e otimização de processos. Essa vivência me deu uma visão aprofundada sobre como os sistemas operam e geram dados em tempo real. A curiosidade sobre "o porquê" por trás das falhas e a busca por eficiência me levaram naturalmente a um caminho de análise destas informações. Descobri na Ciência de Dados a ferramenta ideal para transformar essa experiência prática em insights estratégicos, passando de resolver problemas mecânicos e elétricos para decifrar as histórias que os dados contam.
                 </p>
             </div>
         </section>
 
-        <!-- Skills Dashboard Section -->
         <section id="skills" class="mb-20">
             <h3 class="text-3xl font-bold text-center mb-2 section-title">Painel de Competências</h3>
              <p class="text-center text-gray-500 mb-10">Minha experiência industrial se traduz em habilidades analíticas valiosas. Clique em cada área para explorar.</p>
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <!-- Radar Chart -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                      <h4 class="text-xl font-bold text-center mb-4 text-gray-700">Relevância das Habilidades para Dados</h4>
                     <div class="chart-container">
                         <canvas id="skillsRadarChart"></canvas>
                     </div>
                 </div>
-                <!-- Skills Accordion -->
                 <div id="skills-accordion" class="space-y-4">
-                    <!-- Operação e Sistemas -->
                     <div class="skill-card bg-white rounded-lg shadow-md overflow-hidden">
                         <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none" data-skill="operacao">
                             <h4 class="text-xl font-bold text-gray-800">⚙️ Operação e Sistemas ✨</h4>
@@ -143,7 +132,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Análise e Resolução de Problemas -->
                     <div class="skill-card bg-white rounded-lg shadow-md overflow-hidden">
                         <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none" data-skill="analise">
                             <h4 class="text-xl font-bold text-gray-800">🔍 Análise e Resolução de Problemas ✨</h4>
@@ -165,7 +153,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Gestão e Melhoria Contínua -->
                     <div class="skill-card bg-white rounded-lg shadow-md overflow-hidden">
                         <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none" data-skill="gestao">
                             <h4 class="text-xl font-bold text-gray-800">📈 Gestão e Melhoria Contínua ✨</h4>
@@ -191,36 +178,30 @@
             </div>
         </section>
 
-        <!-- Experience Timeline Section -->
         <section id="experience" class="mb-20">
             <h3 class="text-3xl font-bold text-center mb-2 section-title">Linha do Tempo Profissional</h3>
             <p class="text-center text-gray-500 mb-12">Mais de 10 anos de experiência prática.</p>
             <div class="relative max-w-2xl mx-auto border-l-2 border-005f73/30">
-                <!-- Timeline Item: Vibra energia -->
                 <div class="mb-8 ml-8 timeline-item">
                     <h4 class="text-xl font-bold text-gray-800">Técnico de Operações - Vibra Energia</h4>
                     <p class="text-gray-500">Abril de 2023 - Atualmente</p>
                     <p class="text-gray-700 mt-2">Operação de planta de distribuição de combustíveis, incluindo análises físico-químicas, medições de tanques e testes de qualidade. Coleta e análise sistemática de dados para tomada de decisões estratégicas e operacionais, assegurando conformidade com padrões regulatórios.</p>
                 </div>
-                <!-- Timeline Item: Lmterm Tecnologia em Processamento Térmico -->
                 <div class="mb-8 ml-8 timeline-item">
                     <h4 class="text-xl font-bold text-gray-800">Técnico em Manutenção Industrial - Lmterm Tecnologia</h4>
                     <p class="text-gray-500">Outubro de 2020 - Março de 2023</p>
                     <p class="text-gray-700 mt-2">Manutenção e instalação de grandes equipamentos industriais, ministrando treinamentos. Inspeções minuciosas e análise aprofundada de dados históricos de manutenção (Kaizen, Lean Manufacturing) para identificar causas raiz, elaborar relatórios e otimizar processos.</p>
                 </div>
-                <!-- Timeline Item: Casa do Fitness -->
                 <div class="mb-8 ml-8 timeline-item">
                     <h4 class="text-xl font-bold text-gray-800">Técnico de Manutenção - Casa do Fitness</h4>
                     <p class="text-gray-500">Abril de 2019 - Outubro de 2020</p>
                     <p class="text-gray-700 mt-2">Elaboração de orçamentos e diagnóstico de problemas via contato com clientes. Análise detalhada das demandas para identificar padrões, tendências e oportunidades de melhoria. Gestão de processos de expedição e recebimento de mercadorias.</p>
                 </div>
-                <!-- Timeline Item: Exterran Serviços de Óleo e Gás -->
                 <div class="mb-8 ml-8 timeline-item">
                     <h4 class="text-xl font-bold text-gray-800">Técnico de Campo - Exterran Serviços de Óleo e Gás</h4>
                     <p class="text-gray-500">Julho de 2014 - Abril de 2019</p>
                     <p class="text-gray-700 mt-2">Operação e manutenção de plantas de compressão de gás natural. Atuação em sala de controle, operando remotamente gasodutos via SCADA, analisando dados em tempo real para otimizar processos e garantir segurança. Manutenções preventivas e corretivas em equipamentos críticos.</p>
                 </div>
-                <!-- Timeline Item: Rebouças troca de óleo -->
                 <div class="ml-8 timeline-item">
                     <h4 class="text-xl font-bold text-gray-800">Mecânico - Rebouças troca de óleo</h4>
                     <p class="text-gray-500">Abril de 2012 - Julho de 2014</p>
@@ -229,7 +210,6 @@
             </div>
         </section>
 
-        <!-- Education & Languages -->
         <section id="education" class="mb-20">
              <h3 class="text-3xl font-bold text-center mb-10 section-title">Formação e Idiomas</h3>
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
@@ -260,7 +240,6 @@
 
     </main>
 
-    <!-- Footer / Contact -->
     <footer id="contact" class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-10 text-center">
             <h3 class="text-2xl font-bold mb-2">Vamos Conversar?</h3>
@@ -427,184 +406,28 @@
                 }
             });
 
-            
-    document.addEventListener('DOMContentLoaded', () => {
-        const llmCache = {};
-        const skillDescriptions = {
-            operacao: "Operação e Sistemas, incluindo Centro de Controle Operacional (CCO), SCADA, Sistemas Supervisórios, Distribuição de Combustíveis, Operação de Gasodutos e Permissões de Trabalho, conforme detalhado em minhas experiências na Vibra Energia e Exterran Serviços de Óleo e Gás.",
-            analise: "Análise e Resolução de Problemas, incluindo Manutenção Industrial (Preventiva, Corretiva, Preditiva, Emergencial), Gestão de Ativos, Análise de Causa Raiz, Lean Manufacturing, Inspeção de Equipamentos (Tubovias, Válvulas) e Planejamento de Manutenções, com base nas minhas atuações na Lmterm Tecnologia em Processamento Térmico e Casa do Fitness.",
-            gestao: "Gestão e Otimização, incluindo Fiscalização de Contratos, Liderança de Equipes, Análise de Falhas, Projetos de Melhoria Contínua, Treinamento de Colaboradores e Relacionamento com Fornecedores, conforme demonstrado em minha experiência na Lmterm Tecnologia, Casa do Fitness e Rebouças troca de óleo."
-        };
-
-        async function fetchGeminiExplanation(skillId) {
-            const llmExplanationDiv = document.getElementById(`llm-explanation-${skillId}`);
-            const llmLoadingText = llmExplanationDiv.querySelector('.llm-loading');
-
-            llmExplanationDiv.classList.remove('hidden');
-            llmExplanationDiv.innerHTML = `<p class="llm-loading text-center text-gray-500 flex items-center justify-center"><span class="animate-spin-fast mr-2">⚙️</span> Gerando insights com IA...</p>`;
-
-            if (llmCache[skillId]) {
-                llmExplanationDiv.innerHTML = `<p>${llmCache[skillId]}</p>`;
-                return;
-            }
-
-            const prompt = `Explique a relevância de "${skillDescriptions[skillId]}" no contexto da Ciência de Dados e Análise de Dados. Foque em como a experiência prática nessa área pode ser um diferencial. Mantenha a resposta concisa, com no máximo 100 palavras e em português.`;
-
-            try {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-                const payload = { contents: chatHistory };
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const result = await response.json();
-
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    llmCache[skillId] = text;
-                    llmExplanationDiv.innerHTML = `<p>${text}</p>`;
-                } else {
-                    llmExplanationDiv.innerHTML = `<p class="text-red-500">Erro ao gerar insight. Tente novamente mais tarde.</p>`;
-                }
-            } catch (error) {
-                console.error("Erro ao chamar a API Gemini:", error);
-                llmExplanationDiv.innerHTML = `<p class="text-red-500">Erro de conexão. Verifique sua rede.</p>`;
-            }
-        }
-
-        // Skills Accordion Logic
-        const accordion = document.getElementById('skills-accordion');
-        accordion.addEventListener('click', (event) => {
-            const button = event.target.closest('button');
-            if (!button) return;
-
-            const skillDetails = button.nextElementSibling;
-            const arrow = button.querySelector('span');
-            const skillId = button.dataset.skill;
-            const llmExplanationDiv = document.getElementById(`llm-explanation-${skillId}`);
-
-            // Close all other accordions
-            accordion.querySelectorAll('.skill-details').forEach(detail => {
-                if (detail !== skillDetails) {
-                    detail.style.maxHeight = '0px';
-                    detail.previousElementSibling.querySelector('span').classList.remove('rotate-180');
-                    detail.querySelector('.llm-explanation').classList.add('hidden');
-                }
-            });
-
-            // Toggle the clicked accordion
-            if (skillDetails.style.maxHeight && skillDetails.style.maxHeight !== '0px') {
-                skillDetails.style.maxHeight = '0px';
-                arrow.classList.remove('rotate-180');
-                llmExplanationDiv.classList.add('hidden');
-            } else {
-                skillDetails.style.maxHeight = skillDetails.scrollHeight + 'px';
-                arrow.classList.add('rotate-180');
-                fetchGeminiExplanation(skillId);
-            }
-        });
-
-        // Chart.js Radar Chart Logic
-        const ctx = document.getElementById('skillsRadarChart').getContext('2d');
-        const skillsChart = new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['Análise e Resolução de Problemas', 'Gestão e Melhoria Contínua', 'Operação e Sistemas'],
-                datasets: [{
-                    label: 'Relevância para Ciência de Dados',
-                    data: [9, 8, 7],
-                    backgroundColor: 'rgba(0, 95, 115, 0.2)',
-                    borderColor: 'rgba(0, 95, 115, 1)',
-                    borderWidth: 2,
-                    pointBackgroundColor: 'rgba(0, 95, 115, 1)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgba(0, 95, 115, 1)'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        pointLabels: {
-                            font: {
-                                size: 12,
-                                weight: 'bold'
-                            },
-                            color: '#343a40'
-                        },
-                        ticks: {
-                            beginAtZero: true,
-                            max: 10,
-                            stepSize: 2,
-                            backdropColor: 'rgba(248, 249, 250, 0.7)',
-                            color: '#6c757d'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            color: '#343a40'
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                let label = context.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                if (context.parsed.r !== null) {
-                                    label += context.parsed.r;
-                                }
-                                return label;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Scroll suave para âncoras na URL ao carregar a página
-        if (window.location.hash) {
-            const targetElement = document.querySelector(window.location.hash);
-            if (targetElement) {
-                setTimeout(() => {
-                    targetElement.scrollIntoView({
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
-                }, 100);
-            }
-        }
-    });
-</script>
+                });
+            });
 
+            // Scroll suave para âncoras na URL ao carregar a página
+            if (window.location.hash) {
+                const targetElement = document.querySelector(window.location.hash);
+                if (targetElement) {
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
-
-
