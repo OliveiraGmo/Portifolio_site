@@ -436,6 +436,19 @@
                     });
                 });
             });
+            // Scroll suave para âncoras na URL ao carregar a página (o novo código)
+            if (window.location.hash) {
+                const targetElement = document.querySelector(window.location.hash);
+                if (targetElement) {
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+
+
         });
     </script>
 
